@@ -1,7 +1,7 @@
 
 
 const baseURL = 'https://api.github.com'
-const user = 'nicobermudez'
+const user = '<YOUR_USERNAME>'
 // 8bd68f479b511bc9a7997e60e0d3c9d72f755acf
 function getToken() {
   //change to your token to run in browser, but set
