@@ -1,6 +1,8 @@
-const baseURL = 'https://api.github.com';
-const user = '<YOUR_USERNAME>';
 
+
+const baseURL = 'https://api.github.com'
+const user = 'nicobermudez'
+// 8bd68f479b511bc9a7997e60e0d3c9d72f755acf
 function getToken() {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
@@ -9,21 +11,19 @@ function getToken() {
 
 function forkRepo() {
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
-  const url = `${baseURL}/repos/${repo}/forks`;
+  //use fetch to fork it!
+  const url = `${baseURL}/repos/${repo}/forks`
   fetch(url, {
-    method: 'POST',
+    method: 'POST'
     headers: {
-      Authorization: `token ${getToken()}`
+      Authorization: `token ${getToken}`
     }
-  })
-    .then(res => res.json())
-    .then(json => showResults(json));
+  }).then(res => res.json()).then(json => showResults(json))
 }
 
 function showResults(json) {
-  document.getElementById('results').innerHTML = `<a href=${json.html_url}>${
-    json.html_url
-  }</a>`;
+  //use this function to display the results from forking via the API
+  document.getElementById('results').innerHTML = `<a href=${json.html_url}>${json.html_url}</a>`
 }
 
 function createIssue() {
