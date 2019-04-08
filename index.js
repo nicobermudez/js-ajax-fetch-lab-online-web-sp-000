@@ -1,3 +1,5 @@
+console.log("Hello World")
+
 const baseURL = 'https://api.github.com'
 const user = 'nicobermudez'
 // 8bd68f479b511bc9a7997e60e0d3c9d72f755acf
